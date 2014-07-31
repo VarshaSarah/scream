@@ -16,3 +16,335 @@ Started GET "/" for 127.0.0.1 at 2014-07-31 12:14:20 +0530
 Processing by Rails::WelcomeController#index as HTML
   Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/railties-4.1.1/lib/rails/templates/rails/welcome/index.html.erb (10.7ms)
 Completed 200 OK in 47ms (Views: 35.5ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:31:38 +0530
+Processing by Scream::ContentsController#index as HTML
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (507.4ms)
+Completed 500 Internal Server Error in 528ms
+
+ActionView::Template::Error (
+Problem:
+  No configuration could be found for a session named 'default'.
+Summary:
+  When attempting to create the new session, Mongoid could not find a session configuration for the name: 'default'. This is necessary in order to know the host, port, and options needed to connect.
+Resolution:
+  Double check your mongoid.yml to make sure under the sessions key that a configuration exists for 'default'. If you have set the configuration programatically, ensure that 'default' exists in the configuration hash.):
+    66: :javascript
+    67:   
+    68:   parent.window.postMessage("removetheiframe", "*");
+    69:   conc = #{@contents.to_json}  
+    70:   $(document).on('ready page:load', function(){
+    71:     loadTags();
+    72:     filterInit();
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/sessions/factory.rb:27:in `create'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/sessions.rb:65:in `with_name'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/sessions.rb:105:in `mongo_session'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/sessions.rb:121:in `collection'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/sessions/options.rb:161:in `method_missing'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/contextual/mongo.rb:263:in `initialize'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/contextual.rb:53:in `new'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/contextual.rb:53:in `create_context'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/contextual.rb:35:in `context'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/contextual.rb:20:in `each'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/criteria.rb:60:in `entries'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/criteria.rb:60:in `as_json'
+  activesupport (4.1.1) lib/active_support/json/encoding.rb:34:in `encode'
+  activesupport (4.1.1) lib/active_support/json/encoding.rb:21:in `encode'
+  activesupport (4.1.1) lib/active_support/core_ext/object/json.rb:37:in `to_json_with_active_support_encoder'
+  /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml:69:in `__home_basnal_ruby_scream_app_views_scream_contents_index_html_haml__236631244468552779_69880731220260'
+  actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.1) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.1) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/railtie.rb:194:in `public_send'
+  railties (4.1.1) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-31 12:31:46 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/railties-4.1.1/lib/rails/templates/rails/welcome/index.html.erb (0.8ms)
+Completed 200 OK in 2ms (Views: 2.1ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:31:50 +0530
+Processing by Scream::ContentsController#index as HTML
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (4.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (
+Problem:
+  No configuration could be found for a session named 'default'.
+Summary:
+  When attempting to create the new session, Mongoid could not find a session configuration for the name: 'default'. This is necessary in order to know the host, port, and options needed to connect.
+Resolution:
+  Double check your mongoid.yml to make sure under the sessions key that a configuration exists for 'default'. If you have set the configuration programatically, ensure that 'default' exists in the configuration hash.):
+    66: :javascript
+    67:   
+    68:   parent.window.postMessage("removetheiframe", "*");
+    69:   conc = #{@contents.to_json}  
+    70:   $(document).on('ready page:load', function(){
+    71:     loadTags();
+    72:     filterInit();
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/sessions/factory.rb:27:in `create'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/sessions.rb:65:in `with_name'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/sessions.rb:105:in `mongo_session'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/sessions.rb:121:in `collection'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/sessions/options.rb:161:in `method_missing'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/contextual/mongo.rb:263:in `initialize'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/contextual.rb:53:in `new'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/contextual.rb:53:in `create_context'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/contextual.rb:35:in `context'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/contextual.rb:20:in `each'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/criteria.rb:60:in `entries'
+  /home/basnal/.rvm/gems/ruby-2.1.2/bundler/gems/mongoid-a2586f039fe6/lib/mongoid/criteria.rb:60:in `as_json'
+  activesupport (4.1.1) lib/active_support/json/encoding.rb:34:in `encode'
+  activesupport (4.1.1) lib/active_support/json/encoding.rb:21:in `encode'
+  activesupport (4.1.1) lib/active_support/core_ext/object/json.rb:37:in `to_json_with_active_support_encoder'
+  /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml:69:in `__home_basnal_ruby_scream_app_views_scream_contents_index_html_haml__236631244468552779_69880731220260'
+  actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.1) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.1) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/railtie.rb:194:in `public_send'
+  railties (4.1.1) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.6ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:36:30 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5399ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2734ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (211.6ms)
+Completed 200 OK in 253ms (Views: 237.2ms)
+
+
+Started GET "/assets/scream/contents.css?body=1" for 127.0.0.1 at 2014-07-31 12:36:31 +0530
+
+
+Started GET "/assets/scream/iframe_contents.css?body=1" for 127.0.0.1 at 2014-07-31 12:36:31 +0530
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 12:36:31 +0530
+
+
+Started GET "/assets/scream/iframe_contents.js?body=1" for 127.0.0.1 at 2014-07-31 12:36:31 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 12:36:31 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 12:36:31 +0530
