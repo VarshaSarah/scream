@@ -48,9 +48,9 @@
     .thumbnail
       %img{src: "{{photo_url}}"}
       .bookmark-controls
-        %a.btn.btn-primary.edit-control{:id => "{{_id}}", href: "/contents/{{_id}}/details", "data-remote" => true}
+        %a.btn.btn-primary.edit-control{:id => "{{_id}}", href: "/scream/contents/{{_id}}/details", "data-remote" => true}
           %span.glyphicon.glyphicon-edit
-        %a.btn.btn-default{href:"/contents/{{_id}}",data:{method:"delete" ,confirm:"Are you sure?" }}
+        %a.btn.btn-default{href:"/scream/contents/{{_id}}",data:{method:"delete" ,confirm:"Are you sure?" }}
           %span.glyphicon.glyphicon-trash
       %a{target:"_blank" ,href:"{{url}}" }
         .bookmark-info

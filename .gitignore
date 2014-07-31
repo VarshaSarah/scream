@@ -1,3 +1,6 @@
 .idea/
 /spec/dummy/tmp
 /log
+/spec/dummy/public/snapshots/
+/spec/dummy/public/system/
+spec/dummy/log/

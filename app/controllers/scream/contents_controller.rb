@@ -34,7 +34,7 @@ module Scream
       @content.image_file_name = @content.title
 
       if @content.save 
-        ImageWorker.perform_async(@content.id.to_s)  
+        Scream::ImageWorker.perform_async(@content.id.to_s)  
         respond_to do |format|
           format.html {redirect_to contents_path}
         end

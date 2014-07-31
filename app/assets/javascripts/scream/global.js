@@ -1,5 +1,5 @@
 loadTags = function(){  
-  $("#content_tags").tokenInput("/contents/tags.json", {
+  $("#content_tags").tokenInput("/scream/contents/tags.json", {
     preventDuplicates: true,
     prePopulate: $("#content_tags").data("pre"),
     theme: "facebook",    
