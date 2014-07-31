@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Scream</title>
-  <%= stylesheet_link_tag    "scream/application", media: "all" %>
+  <title>Screamout</title>
+  
+  <%= stylesheet_link_tag media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    "scream/application" %>
+
   <%= javascript_include_tag "scream/application" %>
+
+  <%= javascript_include_tag 'scream/application', 'data-turbolinks-track' => true %>
+ 
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body >
 
 <%= yield %>
 
