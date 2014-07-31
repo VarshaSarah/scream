@@ -1,3 +1,4 @@
+
 if typeof jQuery == 'undefined'
   headElement = document.getElementsByTagName("head")[0]
   linkElement = document.createElement("script")
@@ -40,7 +41,7 @@ closeIframe = ->
     jQ('#screamout').remove()
     document.getElementById('screamoutjs').remove()
     jQ('*','body').not("#screamout").css("opacity","1")
-    jQ('*','body').not("#screamout").css("pointer-events","none")
+    jQ('*','body').not("#screamout").css("pointer-events","auto")
 
 test = ->
   if @jQuery

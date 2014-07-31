@@ -12,11 +12,13 @@ module Scream
     field :title, type: String
     field :url, type: String
     field :image_file_name, type:String
+
     has_mongoid_attached_file :photo,:styles => {:original => ['1920x1680>', :jpg],:small  => ['180x150!',   :jpg]}  
 
     rateable range: (0..5)
     belongs_to :user, class_name: "User"
-    #validates :title, presence: true
+    validates :user_id, presence: true
+    validates :title, presence: true
     validates :url, presence: true, uniqueness: true, format: { with: /(^$)|(^(http|https):\/\/[a-z0-9]+(\.{1}[a-z0-9]+)*\.[a-z]{2,5}[:]?(([0-9]{1,5})?\/.*)$)/i}
     validates :image_file_name, presence: true
     validates_attachment_content_type :photo, :content_type => ["image/jpg", "image/jpeg", "image/png", "application/pdf"]

@@ -28229,3 +28229,3706 @@ Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 1
 Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-31 18:11:49 +0530
   MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.3127ms
   MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"_id"=>BSON::ObjectId('53da2dbf7661723ad1000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4700ms
+
+
+Started DELETE "/scream/contents/%5Bobject%20Object%5D" for 127.0.0.1 at 2014-07-31 18:17:22 +0530
+Processing by Scream::ContentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MNZzkr9LrRr7U2ItaKUdrzPVGYule/Kg8DHUn6zuVA4=", "id"=>"[object Object]"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.0307ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{"_id"=>"[object Object]"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5102ms
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  /home/varsha/scream/app/controllers/scream/contents_controller.rb:56:in `destroy'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/railtie.rb:194:in `public_send'
+  railties (4.1.1) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5245ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (12.8ms)
+Completed 200 OK in 23ms (Views: 22.7ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:17:26 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:20:10 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (13.7ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (15.8ms)
+Completed 200 OK in 53ms (Views: 51.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:11 +0530
+
+
+Started GET "/scream/contents" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7783ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.0334ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (16.7ms)
+Completed 200 OK in 40ms (Views: 38.2ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:18 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:19 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:19 +0530
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-31 18:20:19 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:20:35 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:20:36 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:20:36 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (8.4ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (9.4ms)
+Completed 200 OK in 19ms (Views: 18.2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:20:36 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:36 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:36 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:20:36 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:36 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:37 +0530
+
+
+Started POST "/scream/iframe_contents" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+Processing by Scream::IframeContentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fhMAV7crMu87yYC/Ot3LEENSxEWS5Xlm5O73GGY5hCY=", "content"=>{"url"=>"http://guides.rubyonrails.org/engines.html", "title"=>"Getting Started with Engines — Ruby on Rails Guides", "rates"=>"0", "user_id"=>"", "tags"=>""}, "commit"=>"Create"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6734ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"url"=>"http://guides.rubyonrails.org/engines.html"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 0.5176ms
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_development collection=scream_contents documents=[{"_id"=>BSON::ObjectId('53da3ba77661724183000000'), "tags_array"=>[], "rates"=>0, "rating_delta"=>0.0, "weighted_rate_count"=>0, "url"=>"http://guides.rubyonrails.org/engines.html", "title"=>"Getting Started with Engines — Ruby on Rails Guides", "user_id"=>nil, "image_file_name"=>"Getting_Started_with_Engines_—_Ruby_on_Rails_Guides_1406811047.jpg", "updated_at"=>2014-07-31 12:50:47 UTC, "created_at"=>2014-07-31 12:50:47 UTC}] flags=[]
+                         COMMAND      database=dummy_development command={:getlasterror=>1, :w=>1} runtime: 0.7412ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_development command={:mapreduce=>"scream_contents", :map=>"function() {\n        if (!this.tags_array) {\n          return;\n        }\n\n        for (index in this.tags_array) {\n          emit(this.tags_array[index], 1);\n        }\n      }", :reduce=>"function(previous, current) {\n        var count = 0;\n\n        for (index in current) {\n          count += current[index]\n        }\n\n        return count;\n      }", :query=>{}, :out=>{:replace=>"scream_contents_tags_index"}} runtime: 8.8158ms
+Redirected to http://localhost:8080/scream/contents
+Completed 302 Found in 21ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5083ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"_id"=>BSON::ObjectId('53da3ba77661724183000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3797ms
+
+
+Started GET "/scream/contents" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8906ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (10.9ms)
+Completed 200 OK in 23ms (Views: 21.9ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+
+ActionController::RoutingError (No route matches [GET] "/photos/small/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-31 18:20:47 +0530
+  MOPED: 127.0.0.1:27017 UPDATE       database=dummy_development collection=scream_contents selector={"_id"=>BSON::ObjectId('53da3ba77661724183000000')} update={"$set"=>{"photo_file_name"=>"Getting_Started_with_Engines_—_Ruby_on_Rails_Guides_1406811047.jpg", "photo_content_type"=>"image/jpeg", "photo_file_size"=>113383, "photo_fingerprint"=>"d0a9f230d6aafa1bc23edf568e7f8caa", "photo_updated_at"=>2014-07-31 12:50:56 UTC, "updated_at"=>2014-07-31 12:50:56 UTC}} flags=[]
+                         COMMAND      database=dummy_development command={:getlasterror=>1, :w=>1} runtime: 0.9791ms
+
+
+Started GET "/scream/contents" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4899ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7473ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (11.2ms)
+Completed 200 OK in 23ms (Views: 22.2ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-31 18:21:00 +0530
+
+
+Started GET "/scream/contents" for 127.0.0.1 at 2014-07-31 18:22:31 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6508ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5230ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (278.0ms)
+Completed 200 OK in 450ms (Views: 425.8ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-31 18:22:32 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:22:58 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (12.2ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (15.8ms)
+Completed 200 OK in 55ms (Views: 54.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:22:59 +0530
+
+
+Started POST "/scream/iframe_contents" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+Processing by Scream::IframeContentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fhMAV7crMu87yYC/Ot3LEENSxEWS5Xlm5O73GGY5hCY=", "content"=>{"url"=>"http://guides.rubyonrails.org/active_record_querying.html", "title"=>"Active Record Query Interface — Ruby on Rails Guides", "rates"=>"0", "user_id"=>"p@g.com", "tags"=>""}, "commit"=>"Create"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3439ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"url"=>"http://guides.rubyonrails.org/active_record_querying.html"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 0.2268ms
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_development collection=scream_contents documents=[{"_id"=>BSON::ObjectId('53da3c41766172436f000000'), "tags_array"=>[], "rates"=>0, "rating_delta"=>0.0, "weighted_rate_count"=>0, "url"=>"http://guides.rubyonrails.org/active_record_querying.html", "title"=>"Active Record Query Interface — Ruby on Rails Guides", "user_id"=>"p@g.com", "image_file_name"=>"Active_Record_Query_Interface_—_Ruby_on_Rails_Guides_1406811201.jpg", "updated_at"=>2014-07-31 12:53:21 UTC, "created_at"=>2014-07-31 12:53:21 UTC}] flags=[]
+                         COMMAND      database=dummy_development command={:getlasterror=>1, :w=>1} runtime: 0.3375ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_development command={:mapreduce=>"scream_contents", :map=>"function() {\n        if (!this.tags_array) {\n          return;\n        }\n\n        for (index in this.tags_array) {\n          emit(this.tags_array[index], 1);\n        }\n      }", :reduce=>"function(previous, current) {\n        var count = 0;\n\n        for (index in current) {\n          count += current[index]\n        }\n\n        return count;\n      }", :query=>{}, :out=>{:replace=>"scream_contents_tags_index"}} runtime: 42.3794ms
+Redirected to http://localhost:8080/scream/contents
+Completed 302 Found in 51ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.7221ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"_id"=>BSON::ObjectId('53da3c41766172436f000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6168ms
+
+
+Started GET "/scream/contents" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6817ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (12.8ms)
+Completed 200 OK in 24ms (Views: 22.9ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+
+ActionController::RoutingError (No route matches [GET] "/photos/small/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.7ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-31 18:23:21 +0530
+  MOPED: 127.0.0.1:27017 UPDATE       database=dummy_development collection=scream_contents selector={"_id"=>BSON::ObjectId('53da3c41766172436f000000')} update={"$set"=>{"photo_file_name"=>"Active_Record_Query_Interface_—_Ruby_on_Rails_Guides_1406811201.jpg", "photo_content_type"=>"image/jpeg", "photo_file_size"=>123371, "photo_fingerprint"=>"68e7e4d9375c1e80233a785be538c884", "photo_updated_at"=>2014-07-31 12:53:28 UTC, "updated_at"=>2014-07-31 12:53:28 UTC}} flags=[]
+                         COMMAND      database=dummy_development command={:getlasterror=>1, :w=>1} runtime: 1.3472ms
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:23:32 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (8.3ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (9.2ms)
+Completed 200 OK in 19ms (Views: 18.2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:33 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:34 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:34 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:34 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:34 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:34 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:34 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:34 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:34 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:34 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:34 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:34 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:23:48 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (9.0ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (10.0ms)
+Completed 200 OK in 21ms (Views: 20.1ms)
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:23:49 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:23:58 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:23:59 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:23:59 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (14.4ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (15.7ms)
+Completed 200 OK in 32ms (Views: 31.2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:00 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:24:13 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (8.1ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (9.2ms)
+Completed 200 OK in 19ms (Views: 18.5ms)
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:14 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:15 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:15 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:15 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:15 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:15 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:15 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:15 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:15 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:15 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:24:22 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (7.7ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (8.5ms)
+Completed 200 OK in 18ms (Views: 17.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:23 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:24:42 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:24:43 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:24:43 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (9.1ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (10.1ms)
+Completed 200 OK in 20ms (Views: 19.2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:24:44 +0530
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5043ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"_id"=>BSON::ObjectId('53da2f387661723b48000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3856ms
+
+
+Started GET "/scream/contents" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4788ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8170ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (9.8ms)
+Completed 200 OK in 22ms (Views: 20.6ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/scream/contents" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4937ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8156ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (10.3ms)
+Completed 200 OK in 26ms (Views: 24.2ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:53 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-31 18:25:54 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:26:16 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (9.0ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (10.0ms)
+Completed 200 OK in 21ms (Views: 20.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:17 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:26:33 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (8.7ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (9.8ms)
+Completed 200 OK in 20ms (Views: 19.3ms)
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:26:34 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:27:39 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (11.7ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (12.8ms)
+Completed 200 OK in 24ms (Views: 23.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:40 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:41 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:41 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:41 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:27:41 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:28:03 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (12.7ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (13.7ms)
+Completed 200 OK in 26ms (Views: 24.9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:28:04 +0530
+
+
+Started GET "/scream/contents" for 127.0.0.1 at 2014-07-31 18:29:25 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4565ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7877ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (13.6ms)
+Completed 200 OK in 29ms (Views: 27.5ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 18:29:25 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:25 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:25 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:25 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:25 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:25 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:25 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:25 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:25 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:25 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:25 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+
+
+Started GET "/scream/contents/new" for 127.0.0.1 at 2014-07-31 18:29:26 +0530
+Processing by Scream::ContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/contents/_form1.html.haml (34.3ms)
+  Rendered /home/varsha/scream/app/views/scream/contents/new.html.haml within layouts/scream/application (37.7ms)
+Completed 200 OK in 53ms (Views: 51.9ms)
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:29:31 +0530
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.7522ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"_id"=>BSON::ObjectId('53da2ff27661723b48010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.6305ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.3262ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"_id"=>BSON::ObjectId('53da30437661723b48020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7251ms
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (9.9ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (11.0ms)
+Completed 200 OK in 46ms (Views: 45.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:32 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:33 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:33 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:33 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:33 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:33 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-31 18:29:44 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/railties-4.1.1/lib/rails/templates/rails/welcome/index.html.erb (0.7ms)
+Completed 200 OK in 2ms (Views: 1.9ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5870ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7228ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (16.7ms)
+Completed 200 OK in 31ms (Views: 29.4ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-31 18:29:48 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:29:56 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (9.5ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (10.5ms)
+Completed 200 OK in 21ms (Views: 20.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:29:57 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:31:35 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:31:36 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:31:36 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (13.0ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (13.9ms)
+Completed 200 OK in 49ms (Views: 48.2ms)
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:37 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:31:44 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (13.4ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (14.4ms)
+Completed 200 OK in 28ms (Views: 27.2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:31:45 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:32:19 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (12.7ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (14.0ms)
+Completed 200 OK in 25ms (Views: 24.5ms)
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:20 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:32:28 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (11.8ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (13.3ms)
+Completed 200 OK in 25ms (Views: 24.9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:32:29 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:34:08 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (8.2ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (9.2ms)
+Completed 200 OK in 20ms (Views: 19.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:34:09 +0530
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4909ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8111ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (9.4ms)
+Completed 200 OK in 24ms (Views: 22.5ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:35:57 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:36:02 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:36:03 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:36:03 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (12.9ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (14.2ms)
+Completed 500 Internal Server Error in 56ms
+
+ActionView::Template::Error (couldn't find file 'token-input-facebook'
+  (in /home/varsha/scream/app/assets/stylesheets/scream/screamout.css:3)):
+    3: <head>
+    4:   <title>Latest----------------Screamout</title>
+    5: 
+    6:   <%= stylesheet_link_tag "scream/screamout" %>
+    7:   <%= stylesheet_link_tag media: 'all', 'data-turbolinks-track' => true %>
+    8:   <%= javascript_include_tag 'scream/application', 'data-turbolinks-track' => true %>
+    9:   <%= csrf_meta_tags %>
+  sprockets (2.11.0) lib/sprockets/context.rb:106:in `resolve'
+  sprockets (2.11.0) lib/sprockets/context.rb:146:in `require_asset'
+  sprockets (2.11.0) lib/sprockets/directive_processor.rb:217:in `process_require_directive'
+  sprockets (2.11.0) lib/sprockets/directive_processor.rb:167:in `block in process_directives'
+  sprockets (2.11.0) lib/sprockets/directive_processor.rb:165:in `each'
+  sprockets (2.11.0) lib/sprockets/directive_processor.rb:165:in `process_directives'
+  sprockets (2.11.0) lib/sprockets/directive_processor.rb:99:in `evaluate'
+  tilt (1.4.1) lib/tilt/template.rb:103:in `render'
+  sprockets (2.11.0) lib/sprockets/context.rb:197:in `block in evaluate'
+  sprockets (2.11.0) lib/sprockets/context.rb:194:in `each'
+  sprockets (2.11.0) lib/sprockets/context.rb:194:in `evaluate'
+  sprockets (2.11.0) lib/sprockets/processed_asset.rb:12:in `initialize'
+  sprockets (2.11.0) lib/sprockets/base.rb:374:in `new'
+  sprockets (2.11.0) lib/sprockets/base.rb:374:in `block in build_asset'
+  sprockets (2.11.0) lib/sprockets/base.rb:395:in `circular_call_protection'
+  sprockets (2.11.0) lib/sprockets/base.rb:373:in `build_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:94:in `block in build_asset'
+  sprockets (2.11.0) lib/sprockets/caching.rb:58:in `cache_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:93:in `build_asset'
+  sprockets (2.11.0) lib/sprockets/base.rb:287:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:61:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/bundled_asset.rb:37:in `init_with'
+  sprockets (2.11.0) lib/sprockets/asset.rb:24:in `from_hash'
+  sprockets (2.11.0) lib/sprockets/caching.rb:54:in `cache_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:93:in `build_asset'
+  sprockets (2.11.0) lib/sprockets/base.rb:287:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:61:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/environment.rb:75:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/base.rb:295:in `[]'
+  sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:214:in `lookup_asset_for_path'
+  sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:182:in `check_errors_for'
+  sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:156:in `block in stylesheet_link_tag'
+  sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:155:in `map'
+  sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:155:in `stylesheet_link_tag'
+  /home/varsha/scream/app/views/layouts/scream/iframe_application.html:6:in `__home_varsha_scream_app_views_layouts_scream_iframe_application_html___1849777445285030200_70149580605680'
+  actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:67:in `render_with_layout'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.1) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.1) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/railtie.rb:194:in `public_send'
+  railties (4.1.1) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:36:22 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (8.9ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (10.0ms)
+Completed 200 OK in 54ms (Views: 53.5ms)
+
+
+Started GET "/assets/scream/token-input-facebook.css?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:36:23 +0530
+
+
+Started GET "/contents/tags.json?q=g" for 127.0.0.1 at 2014-07-31 18:37:19 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (9.9ms)
+
+
+Started GET "/contents/tags.json?q=g" for 127.0.0.1 at 2014-07-31 18:37:27 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.9ms)
+
+
+Started GET "/contents/tags.json?q=s" for 127.0.0.1 at 2014-07-31 18:37:28 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.0ms)
+
+
+Started GET "/contents/tags.json?q=st" for 127.0.0.1 at 2014-07-31 18:37:30 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.9ms)
+
+
+Started GET "/contents/tags.json?q=stack" for 127.0.0.1 at 2014-07-31 18:37:33 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.5ms)
+
+
+Started GET "/scream/contents/tags.json?q=s" for 127.0.0.1 at 2014-07-31 18:37:42 +0530
+Processing by Scream::ContentsController#tags as JSON
+  Parameters: {"q"=>"s"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4599ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"tags_array"=>{"$all"=>[/s/]}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 17.0465ms
+Completed 200 OK in 20ms (Views: 0.3ms)
+
+
+Started GET "/scream/contents/tags.json?q=st" for 127.0.0.1 at 2014-07-31 18:37:43 +0530
+Processing by Scream::ContentsController#tags as JSON
+  Parameters: {"q"=>"st"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"tags_array"=>{"$all"=>[/st/]}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8492ms
+Completed 200 OK in 2ms (Views: 0.2ms)
+
+
+Started GET "/scream/contents/tags.json?q=sta" for 127.0.0.1 at 2014-07-31 18:37:43 +0530
+Processing by Scream::ContentsController#tags as JSON
+  Parameters: {"q"=>"sta"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"tags_array"=>{"$all"=>[/sta/]}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8947ms
+Completed 200 OK in 3ms (Views: 0.2ms)
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:42:01 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:42:06 +0530
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 18:43:01 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6882ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5888ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (329.2ms)
+Completed 200 OK in 471ms (Views: 452.8ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-31 18:43:02 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:43:07 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:43:08 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:43:08 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (17.9ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (21.6ms)
+Completed 200 OK in 64ms (Views: 62.9ms)
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:43:08 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:08 +0530
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:43:08 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:08 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:08 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:08 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:43:09 +0530
+
+
+Started GET "/contents/tags.json?q=s" for 127.0.0.1 at 2014-07-31 18:43:13 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (5.3ms)
+
+
+Started GET "/contents/tags.json?q=st" for 127.0.0.1 at 2014-07-31 18:43:15 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.6ms)
+
+
+Started GET "/contents/tags.json?q=sta" for 127.0.0.1 at 2014-07-31 18:43:16 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (5.7ms)
+
+
+Started GET "/contents/tags.json?q=stac" for 127.0.0.1 at 2014-07-31 18:43:16 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.2ms)
+
+
+Started GET "/contents/tags.json?q=stack" for 127.0.0.1 at 2014-07-31 18:43:17 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.8ms)
+
+
+Started GET "/contents/tags.json?q=st" for 127.0.0.1 at 2014-07-31 18:43:18 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.9ms)
+
+
+Started GET "/contents/tags.json?q=s" for 127.0.0.1 at 2014-07-31 18:43:19 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.4ms)
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 18:47:15 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/_new_content2.html.haml (15.3ms)
+  Rendered /home/varsha/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (17.0ms)
+Completed 200 OK in 32ms (Views: 30.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/scream/token-input-facebook.css?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/scream/screamout.css?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 18:47:16 +0530
+
+
+Started GET "/contents/tags.json?q=s" for 127.0.0.1 at 2014-07-31 18:47:19 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.9ms)
+
+
+Started GET "/contents/tags.json?q=st" for 127.0.0.1 at 2014-07-31 18:47:20 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.2ms)
+
+
+Started GET "/contents/tags.json?q=sta" for 127.0.0.1 at 2014-07-31 18:47:20 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.0ms)

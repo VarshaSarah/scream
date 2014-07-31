@@ -1,6 +1,8 @@
 /*
 *= require bootstrap
+*= require scream/token-input-facebook
 */
+
 
 .content{
     padding: 20px;
