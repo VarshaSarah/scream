@@ -350,6 +350,7 @@ Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 1
 Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 12:36:31 +0530
 
 
+<<<<<<< HEAD
 Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:42:29 +0530
 Processing by Scream::ContentsController#index as HTML
   MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.0625ms
@@ -11796,6 +11797,24 @@ ActionView::Template::Error (couldn't find file 'contents'
     7:   <%= stylesheet_link_tag "token-input-facebook.css" %>
     8: 	
     9:   <%= stylesheet_link_tag media: 'all', 'data-turbolinks-track' => true %>
+=======
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:44:48 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5671ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1819ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (210.7ms)
+Completed 500 Internal Server Error in 1602ms
+
+ActionView::Template::Error (couldn't find file 'jquery.tokeninput'
+  (in /home/basnal/ruby/scream/app/assets/javascripts/scream/application.js:16)):
+    3: <head>
+    4:   <title>Scream</title>
+    5:   <%= stylesheet_link_tag    "scream/application", media: "all" %>
+    6:   <%= javascript_include_tag "scream/application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   sprockets (2.11.0) lib/sprockets/context.rb:106:in `resolve'
   sprockets (2.11.0) lib/sprockets/context.rb:146:in `require_asset'
   sprockets (2.11.0) lib/sprockets/directive_processor.rb:217:in `process_require_directive'
@@ -11830,7 +11849,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:134:in `block in javascript_include_tag'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `map'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `javascript_include_tag'
+<<<<<<< HEAD
   /home/varsha/scream/app/views/layouts/scream/application.html.erb:6:in `__home_varsha_scream_app_views_layouts_scream_application_html_erb___1626287828437941304_44872100'
+=======
+  /home/basnal/ruby/scream/app/views/layouts/scream/application.html.erb:6:in `__home_basnal_ruby_scream_app_views_layouts_scream_application_html_erb___1468398921382701676_51944480'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
   activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
   actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
@@ -11849,7 +11872,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -11861,17 +11888,23 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
@@ -11935,6 +11968,7 @@ ActionView::Template::Error (couldn't find file 'contents'
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -11961,6 +11995,34 @@ ActionView::Template::Error (couldn't find file 'contents'
     7:   <%= stylesheet_link_tag "token-input-facebook.css" %>
     8: 	
     9:   <%= stylesheet_link_tag media: 'all', 'data-turbolinks-track' => true %>
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.4ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:45:39 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3552ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1936ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (7.2ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (couldn't find file 'filter'
+  (in /home/basnal/ruby/scream/app/assets/javascripts/scream/application.js:30)):
+    3: <head>
+    4:   <title>Scream</title>
+    5:   <%= stylesheet_link_tag    "scream/application", media: "all" %>
+    6:   <%= javascript_include_tag "scream/application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   sprockets (2.11.0) lib/sprockets/context.rb:106:in `resolve'
   sprockets (2.11.0) lib/sprockets/context.rb:146:in `require_asset'
   sprockets (2.11.0) lib/sprockets/directive_processor.rb:217:in `process_require_directive'
@@ -11995,7 +12057,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:134:in `block in javascript_include_tag'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `map'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `javascript_include_tag'
+<<<<<<< HEAD
   /home/varsha/scream/app/views/layouts/scream/application.html.erb:6:in `__home_varsha_scream_app_views_layouts_scream_application_html_erb___1626287828437941304_44872100'
+=======
+  /home/basnal/ruby/scream/app/views/layouts/scream/application.html.erb:6:in `__home_basnal_ruby_scream_app_views_layouts_scream_application_html_erb___1468398921382701676_51944480'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
   activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
   actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
@@ -12014,7 +12080,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -12026,17 +12096,23 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
@@ -12100,6 +12176,7 @@ ActionView::Template::Error (couldn't find file 'contents'
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -12126,6 +12203,33 @@ ActionView::Template::Error (couldn't find file 'contents'
     7:   <%= stylesheet_link_tag "token-input-facebook.css" %>
     8: 	
     9:   <%= stylesheet_link_tag media: 'all', 'data-turbolinks-track' => true %>
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.3ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:45:53 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2837ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (6.6ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (couldn't find file 'mustache'
+  (in /home/basnal/ruby/scream/app/assets/javascripts/scream/application.js:31)):
+    3: <head>
+    4:   <title>Scream</title>
+    5:   <%= stylesheet_link_tag    "scream/application", media: "all" %>
+    6:   <%= javascript_include_tag "scream/application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   sprockets (2.11.0) lib/sprockets/context.rb:106:in `resolve'
   sprockets (2.11.0) lib/sprockets/context.rb:146:in `require_asset'
   sprockets (2.11.0) lib/sprockets/directive_processor.rb:217:in `process_require_directive'
@@ -12160,7 +12264,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:134:in `block in javascript_include_tag'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `map'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `javascript_include_tag'
+<<<<<<< HEAD
   /home/varsha/scream/app/views/layouts/scream/application.html.erb:6:in `__home_varsha_scream_app_views_layouts_scream_application_html_erb___1626287828437941304_44872100'
+=======
+  /home/basnal/ruby/scream/app/views/layouts/scream/application.html.erb:6:in `__home_basnal_ruby_scream_app_views_layouts_scream_application_html_erb___1468398921382701676_51944480'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
   activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
   actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
@@ -12179,7 +12287,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -12191,17 +12303,23 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
@@ -12265,6 +12383,7 @@ ActionView::Template::Error (couldn't find file 'contents'
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -12291,6 +12410,33 @@ ActionView::Template::Error (couldn't find file 'contents'
     7:   <%= stylesheet_link_tag "token-input-facebook.css" %>
     8: 	
     9:   <%= stylesheet_link_tag media: 'all', 'data-turbolinks-track' => true %>
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:46:04 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2436ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (5.0ms)
+Completed 500 Internal Server Error in 49ms
+
+ActionView::Template::Error (couldn't find file 'global'
+  (in /home/basnal/ruby/scream/app/assets/javascripts/scream/application.js:32)):
+    3: <head>
+    4:   <title>Scream</title>
+    5:   <%= stylesheet_link_tag    "scream/application", media: "all" %>
+    6:   <%= javascript_include_tag "scream/application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   sprockets (2.11.0) lib/sprockets/context.rb:106:in `resolve'
   sprockets (2.11.0) lib/sprockets/context.rb:146:in `require_asset'
   sprockets (2.11.0) lib/sprockets/directive_processor.rb:217:in `process_require_directive'
@@ -12325,7 +12471,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:134:in `block in javascript_include_tag'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `map'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `javascript_include_tag'
+<<<<<<< HEAD
   /home/varsha/scream/app/views/layouts/scream/application.html.erb:6:in `__home_varsha_scream_app_views_layouts_scream_application_html_erb___1626287828437941304_44872100'
+=======
+  /home/basnal/ruby/scream/app/views/layouts/scream/application.html.erb:6:in `__home_basnal_ruby_scream_app_views_layouts_scream_application_html_erb___1468398921382701676_51944480'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
   activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
   actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
@@ -12344,7 +12494,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -12356,17 +12510,23 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
@@ -12430,6 +12590,7 @@ ActionView::Template::Error (couldn't find file 'contents'
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -12456,6 +12617,183 @@ ActionView::Template::Error (couldn't find file 'contents'
     7:   <%= stylesheet_link_tag "token-input-facebook.css" %>
     8: 	
     9:   <%= stylesheet_link_tag media: 'all', 'data-turbolinks-track' => true %>
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.4ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:46:13 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4068ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (7.8ms)
+Completed 200 OK in 526ms (Views: 524.6ms)
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:14 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 12:46:52 +0530
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 12:47:35 +0530
+
+
+Started GET "/assets/stylesheets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 12:48:03 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/stylesheets/scream/application.css"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.7ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (73.2ms)
+
+
+Started GET "/assets/stylesheets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 12:48:09 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/stylesheets/scream/application.css"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.6ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:48:54 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3936ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1791ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (6.8ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (couldn't find file 'jquery.tokeninput'
+  (in /home/basnal/ruby/scream/app/assets/javascripts/scream/application.js:16)):
+    3: <head>
+    4:   <title>Scream</title>
+    5:   <%= stylesheet_link_tag    "scream/application", media: "all" %>
+    6:   <%= javascript_include_tag "scream/application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   sprockets (2.11.0) lib/sprockets/context.rb:106:in `resolve'
   sprockets (2.11.0) lib/sprockets/context.rb:146:in `require_asset'
   sprockets (2.11.0) lib/sprockets/directive_processor.rb:217:in `process_require_directive'
@@ -12490,7 +12828,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:134:in `block in javascript_include_tag'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `map'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `javascript_include_tag'
+<<<<<<< HEAD
   /home/varsha/scream/app/views/layouts/scream/application.html.erb:6:in `__home_varsha_scream_app_views_layouts_scream_application_html_erb___1626287828437941304_44872100'
+=======
+  /home/basnal/ruby/scream/app/views/layouts/scream/application.html.erb:6:in `__home_basnal_ruby_scream_app_views_layouts_scream_application_html_erb___1468398921382701676_51944480'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
   activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
   actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
@@ -12509,7 +12851,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -12518,6 +12864,7 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
   actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
   actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+<<<<<<< HEAD
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
@@ -12525,13 +12872,21 @@ ActionView::Template::Error (couldn't find file 'contents'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+=======
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
@@ -12595,6 +12950,7 @@ ActionView::Template::Error (couldn't find file 'contents'
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -12741,6 +13097,174 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
   actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
   actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.8ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:49:23 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2789ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (6.0ms)
+Completed 200 OK in 15ms (Views: 13.8ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 12:49:24 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 12:50:19 +0530
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3701ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2142ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (5.7ms)
+Completed 200 OK in 49ms (Views: 48.7ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 12:51:22 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 12:53:10 +0530
+
+
+Started GET "/assets/screamout.js" for 127.0.0.1 at 2014-07-31 12:54:19 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/screamout.js"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
   railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
@@ -12760,6 +13284,203 @@ ActionView::Template::Error (couldn't find file 'contents'
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.0ms)
+
+
+Started GET "/contents/tags.json?q=n" for 127.0.0.1 at 2014-07-31 12:54:37 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.5ms)
+
+
+Started GET "/contents/tags.json?q=k" for 127.0.0.1 at 2014-07-31 12:54:41 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.2ms)
+
+
+Started GET "/contents/tags.json?q=llllllll" for 127.0.0.1 at 2014-07-31 12:54:46 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (5.0ms)
+
+
+Started GET "/contents/tags.json?q=lllllll" for 127.0.0.1 at 2014-07-31 12:54:47 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (6.2ms)
+
+
+Started GET "/contents/tags.json?q=l" for 127.0.0.1 at 2014-07-31 12:54:47 +0530
+
+ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (6.1ms)
+
+
+Started GET "/assets/screamout.js" for 127.0.0.1 at 2014-07-31 12:55:09 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/screamout.js"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -12906,6 +13627,23 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
   actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
   actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.2ms)
+
+
+Started GET "/assets/screamout.js" for 127.0.0.1 at 2014-07-31 12:55:34 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/screamout.js"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
   railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
@@ -12925,6 +13663,155 @@ ActionView::Template::Error (couldn't find file 'contents'
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.2ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4172ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2133ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (10.1ms)
+Completed 200 OK in 60ms (Views: 58.9ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 12:56:17 +0530
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 12:56:22 +0530
+
+
+Started GET "/assets/iframe.css" for 127.0.0.1 at 2014-07-31 12:56:23 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/iframe.css"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.0ms)
+
+
+Started GET "/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 12:56:23 +0530
+
+ActionController::RoutingError (No route matches [GET] "/iframe_contents/new"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -12991,6 +13878,44 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
   actionview (4.1.1) lib/action_view/template.rb:143:in `render'
   actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:67:in `render_with_layout'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.5ms)
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 12:58:08 +0530
+
+
+Started GET "/assets/scream/iframe.css" for 127.0.0.1 at 2014-07-31 12:58:09 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 12:58:09 +0530
+Processing by Scream::IframeContentsController#new as HTML
+Completed 500 Internal Server Error in 11ms
+
+ActionView::MissingTemplate (Missing template layouts/iframe_application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder, :slim, :haml]}. Searched in:
+  * "/home/basnal/ruby/scream/spec/dummy/app/views"
+  * "/home/basnal/ruby/scream/app/views"
+):
+  actionview (4.1.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.1) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:87:in `resolve_layout'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:94:in `resolve_layout'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:77:in `block in find_layout'
+  actionview (4.1.1) lib/action_view/lookup_context.rb:244:in `with_layout_format'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:18:in `with_layout_format'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:77:in `find_layout'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
   actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
   actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
@@ -13004,7 +13929,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -13016,17 +13945,23 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
@@ -13090,6 +14025,7 @@ ActionView::Template::Error (couldn't find file 'contents'
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -13156,6 +14092,37 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
   actionview (4.1.1) lib/action_view/template.rb:143:in `render'
   actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:67:in `render_with_layout'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 12:59:09 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 12:59:10 +0530
+Processing by Scream::IframeContentsController#new as HTML
+Completed 500 Internal Server Error in 26ms
+
+ActionView::MissingTemplate (Missing template layouts/iframe_application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder, :slim, :haml]}. Searched in:
+  * "/home/basnal/ruby/scream/spec/dummy/app/views"
+  * "/home/basnal/ruby/scream/app/views"
+):
+  actionview (4.1.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.1) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:87:in `resolve_layout'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:94:in `resolve_layout'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:77:in `block in find_layout'
+  actionview (4.1.1) lib/action_view/lookup_context.rb:244:in `with_layout_format'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:18:in `with_layout_format'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:77:in `find_layout'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
   actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
   actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
@@ -13169,7 +14136,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -13181,17 +14152,23 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
@@ -13241,6 +14218,7 @@ ActionView::Template::Error (couldn't find file 'contents'
   railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
   activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
   activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
   railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
   actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
@@ -13316,11 +14294,93 @@ ActionView::Template::Error (couldn't find file 'contents'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `map'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `javascript_include_tag'
   /home/varsha/scream/app/views/layouts/scream/application.html.erb:6:in `__home_varsha_scream_app_views_layouts_scream_application_html_erb___1626287828437941304_44872100'
+=======
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 13:00:02 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 13:00:03 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/basnal/ruby/scream/app/views/scream/iframe_contents/_new_content2.html.haml (40.3ms)
+  Rendered /home/basnal/ruby/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (43.3ms)
+Completed 500 Internal Server Error in 56ms
+
+ActionView::Template::Error (Couldn't find wrapper with name horizontal):
+     8: .content
+     9:   .container-fluid{:style => "opacity:1;"}
+    10:     .col-md-8
+    11:       = simple_form_for(@content, url: iframe_contents_path, wrapper: :horizontal,
+    12:        :html=>{:class => 'form-horizontal', :id=>"newform", onload: "askData"}) do |f|
+    13:         = hidden_field_tag :authenticity_token, form_authenticity_token
+    14:         = f.error_notification
+  simple_form (3.0.2) lib/simple_form.rb:162:in `wrapper'
+  simple_form (3.0.2) lib/simple_form/form_builder.rb:41:in `initialize'
+  actionview (4.1.1) lib/action_view/helpers/form_helper.rb:1146:in `new'
+  actionview (4.1.1) lib/action_view/helpers/form_helper.rb:1146:in `instantiate_builder'
+  actionview (4.1.1) lib/action_view/helpers/form_helper.rb:433:in `form_for'
+  haml (4.1.0.beta.1) lib/haml/helpers/action_view_mods.rb:134:in `form_for_with_haml'
+  haml (4.1.0.beta.1) lib/haml/helpers/action_view_xss_mods.rb:28:in `form_for_with_haml_xss'
+  simple_form (3.0.2) lib/simple_form/action_view_extensions/form_helper.rb:22:in `block in simple_form_for'
+  simple_form (3.0.2) lib/simple_form/action_view_extensions/form_helper.rb:41:in `with_simple_form_field_error_proc'
+  simple_form (3.0.2) lib/simple_form/action_view_extensions/form_helper.rb:21:in `simple_form_for'
+  /home/basnal/ruby/scream/app/views/scream/iframe_contents/_new_content2.html.haml:11:in `__home_basnal_ruby_scream_app_views_scream_iframe_contents__new_content__html_haml__3164009755153793286_56477340'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
   activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
   actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
   actionview (4.1.1) lib/action_view/template.rb:143:in `render'
+<<<<<<< HEAD
   actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:67:in `render_with_layout'
+=======
+  actionview (4.1.1) lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+  actionview (4.1.1) lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.1) lib/action_view/renderer/partial_renderer.rb:278:in `render'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:21:in `render'
+  actionview (4.1.1) lib/action_view/helpers/rendering_helper.rb:32:in `render'
+  haml (4.1.0.beta.1) lib/haml/helpers/action_view_mods.rb:10:in `block in render_with_haml'
+  haml (4.1.0.beta.1) lib/haml/helpers.rb:89:in `non_haml'
+  haml (4.1.0.beta.1) lib/haml/helpers/action_view_mods.rb:10:in `render_with_haml'
+  /home/basnal/ruby/scream/app/views/scream/iframe_contents/new.html.haml:1:in `__home_basnal_ruby_scream_app_views_scream_iframe_contents_new_html_haml___1326920744491788702_53111820'
+  actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
   actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
   actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
@@ -13334,7 +14394,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -13346,17 +14410,23 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+<<<<<<< HEAD
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+=======
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
   activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
   actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
@@ -13420,6 +14490,7 @@ ActionView::Template::Error (couldn't find file 'contents'
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -13481,6 +14552,164 @@ ActionView::Template::Error (couldn't find file 'contents'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `map'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:133:in `javascript_include_tag'
   /home/varsha/scream/app/views/layouts/scream/application.html.erb:6:in `__home_varsha_scream_app_views_layouts_scream_application_html_erb___1626287828437941304_44872100'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.5ms)
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 13:01:54 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 13:01:55 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/basnal/ruby/scream/app/views/scream/iframe_contents/_new_content2.html.haml (182.3ms)
+  Rendered /home/basnal/ruby/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (183.4ms)
+Completed 200 OK in 230ms (Views: 229.9ms)
+
+
+Started GET "/assets/scream/screamout.js" for 127.0.0.1 at 2014-07-31 13:05:25 +0530
+
+
+Started GET "/scream/iframe_contents/new/" for 127.0.0.1 at 2014-07-31 13:05:26 +0530
+Processing by Scream::IframeContentsController#new as HTML
+  Rendered /home/basnal/ruby/scream/app/views/scream/iframe_contents/_new_content2.html.haml (205.2ms)
+  Rendered /home/basnal/ruby/scream/app/views/scream/iframe_contents/new.html.haml within layouts/scream/iframe_application (208.9ms)
+Completed 200 OK in 260ms (Views: 244.5ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 13:06:24 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6228ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1936ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (12.7ms)
+Completed 200 OK in 36ms (Views: 35.4ms)
+
+
+Started GET "/stylesheets/token-input-facebook.css" for 127.0.0.1 at 2014-07-31 13:06:24 +0530
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/token-input-facebook.css"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-31 13:06:24 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-31 13:06:24 +0530
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 13:06:59 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3315ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2091ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (6.5ms)
+Completed 200 OK in 34ms (Views: 25.4ms)
+
+
+Started GET "/stylesheets/token-input-facebook.css" for 127.0.0.1 at 2014-07-31 13:06:59 +0530
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/token-input-facebook.css"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-31 13:06:59 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-31 13:06:59 +0530
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 13:10:08 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4441ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2400ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml (6.5ms)
+Completed 200 OK in 16ms (Views: 8.8ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 13:12:33 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3691ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2068ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (6.0ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( scream/token-input-facebook.css )` to `config/initializers/assets.rb` and restart your server):
+    4:   <title>Screamout</title>
+    5: 
+    6: 	<%= stylesheet_link_tag "scream/application" %>
+    7:     <%= stylesheet_link_tag "scream/token-input-facebook.css" %>
+    8: 	
+    9:     <%= stylesheet_link_tag media: 'all', 'data-turbolinks-track' => true %>
+   10:     <%= javascript_include_tag 'scream/application', 'data-turbolinks-track' => true %>
+  sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:185:in `check_errors_for'
+  sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:156:in `block in stylesheet_link_tag'
+  sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:155:in `map'
+  sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:155:in `stylesheet_link_tag'
+  /home/basnal/ruby/scream/app/views/layouts/scream/application.html.erb:7:in `__home_basnal_ruby_scream_app_views_layouts_scream_application_html_erb___823440985051361316_59680820'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
   activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
   actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
@@ -13499,7 +14728,11 @@ ActionView::Template::Error (couldn't find file 'contents'
   actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -13579,6 +14812,7 @@ ActionView::Template::Error (couldn't find file 'contents'
   activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+<<<<<<< HEAD
   rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
   railties (4.1.1) lib/rails/engine.rb:514:in `call'
   railties (4.1.1) lib/rails/application.rb:144:in `call'
@@ -13751,6 +14985,32 @@ Completed 200 OK in 336ms (Views: 318.4ms)
 
 
 Started GET "/stylesheets/token-input-facebook.css" for 127.0.0.1 at 2014-07-31 13:10:16 +0530
+=======
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.4ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2713ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (4.9ms)
+Completed 200 OK in 96ms (Views: 95.4ms)
+
+
+Started GET "/stylesheets/token-input-facebook.css" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/token-input-facebook.css"):
   actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
@@ -13773,6 +15033,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/token-input
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -13863,10 +15124,89 @@ Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 13:1
 
 
 Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:11 +0530
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.5ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 13:12:41 +0530
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
 
 
 Started GET "/scream" for 127.0.0.1 at 2014-07-31 13:13:11 +0530
 Processing by Scream::ContentsController#index as HTML
+<<<<<<< HEAD
   MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7765ms
   MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3058ms
   Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (284.9ms)
@@ -13880,11 +15220,30 @@ ActionView::Template::Error (Asset filtered out and will not be served: add `Rai
      9: 
     10:   <%= javascript_include_tag "scream/application" %>
     11: 
+=======
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4615ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2416ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (7.8ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( scream/token-input-facebook.css )` to `config/initializers/assets.rb` and restart your server):
+    4:   <title>Screamout</title>
+    5: 
+    6: 	<%= stylesheet_link_tag "scream/application" %>
+    7:     <%= stylesheet_link_tag "scream/token-input-facebook.css" %>
+    8: 	
+    9:     <%= stylesheet_link_tag media: 'all', 'data-turbolinks-track' => true %>
+   10:     <%= javascript_include_tag 'scream/application', 'data-turbolinks-track' => true %>
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:185:in `check_errors_for'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:156:in `block in stylesheet_link_tag'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:155:in `map'
   sprockets-rails (2.1.3) lib/sprockets/rails/helper.rb:155:in `stylesheet_link_tag'
+<<<<<<< HEAD
   /home/varsha/scream/app/views/layouts/scream/application.html.erb:8:in `__home_varsha_scream_app_views_layouts_scream_application_html_erb___2650422117650765686_48648820'
+=======
+  /home/basnal/ruby/scream/app/views/layouts/scream/application.html.erb:7:in `__home_basnal_ruby_scream_app_views_layouts_scream_application_html_erb___823440985051361316_56952240'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
   activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
   actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
@@ -13903,7 +15262,11 @@ ActionView::Template::Error (Asset filtered out and will not be served: add `Rai
   actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -13989,6 +15352,7 @@ ActionView::Template::Error (Asset filtered out and will not be served: add `Rai
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -14079,6 +15443,28 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:38
 Started GET "/contents/tags.json?q=g" for 127.0.0.1 at 2014-07-31 13:13:41 +0530
 
 ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.3ms)
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3735ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (5.0ms)
+Completed 200 OK in 32ms (Views: 31.2ms)
+
+
+Started GET "/stylesheets/token-input-facebook.css" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/token-input-facebook.css"):
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
   actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
@@ -14099,6 +15485,7 @@ ActionController::RoutingError (No route matches [GET] "/contents/tags.json"):
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /home/varsha/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -14480,3 +15867,229 @@ ActionController::RoutingError (No route matches [GET] "/assets/screamout.js"):
   Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
   Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
   Rendered /home/varsha/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.6ms)
+=======
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/basnal/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/basnal/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 13:13:22 +0530
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 13:14:00 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4383ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2033ms
+  Rendered /home/basnal/ruby/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (7.4ms)
+Completed 200 OK in 710ms (Views: 708.5ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 13:14:00 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:00 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 13:14:01 +0530
+>>>>>>> dc4e18c734e4903bf92d1589aa93c9227f6ae822
+
+
+Started GET "/scream" for 127.0.0.1 at 2014-07-31 13:43:47 +0530
+Processing by Scream::ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.4671ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=scream_contents selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4627ms
+  Rendered /home/varsha/scream/app/views/scream/contents/index.html.haml within layouts/scream/application (279.0ms)
+Completed 200 OK in 442ms (Views: 424.8ms)
+
+
+Started GET "/assets/scream/application.css?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/scream/jquery.tokeninput.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/scream/filter.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/scream/mustache.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/scream/global.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/scream/contents.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530
+
+
+Started GET "/assets/scream/application.js?body=1" for 127.0.0.1 at 2014-07-31 13:43:48 +0530

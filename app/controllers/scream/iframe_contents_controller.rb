@@ -2,7 +2,7 @@ require_dependency "scream/application_controller"
 
 module Scream
   class IframeContentsController < ApplicationController
-    layout 'iframe_application'
+    layout 'scream/iframe_application'
     def new
 
       @content = Content.new
