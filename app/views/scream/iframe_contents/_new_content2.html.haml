@@ -30,7 +30,7 @@
       document.getElementById('content_url').value = data[1];
     };
 
-    $('#cancel').on ('click',function(){parent.window.postMessage("removetheiframe", "*");})
+    jQuery('#cancel').on ('click',function(){parent.window.postMessage("removetheiframe", "*");})
     
 
     window.addEventListener("message", receiveMessage, false);

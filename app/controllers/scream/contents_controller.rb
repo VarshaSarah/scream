@@ -95,23 +95,23 @@ module Scream
     end
     
     private
-    def content_params_input
-      params.require(:content).permit(:url,:photo, :title, :tags, :rates, :user_id)
-    end
+      def content_params_input
+        params.require(:content).permit(:url,:photo, :title, :tags, :rates, :user_id)
+      end
 
-    def tags_to_hash(cons)
-      cons.map do |con|
-        {id: con, name: con}
-      end   
-    end
-  #not required************************************
+      def tags_to_hash(cons)
+        cons.map do |con|
+          {id: con, name: con}
+        end   
+      end
+    #not required************************************
 
-    def content_to_hash(cons)
-        cons.map do |cons|
-          {id: cons[:_id].to_s, url: cons.url, title: cons.title, photo_url:cons.photo.url}
-        end
-        #binding.pry
-    end
+      def content_to_hash(cons)
+          cons.map do |cons|
+            {id: cons[:_id].to_s, url: cons.url, title: cons.title, photo_url:cons.photo.url}
+          end
+          #binding.pry
+      end
 
   end
 end
