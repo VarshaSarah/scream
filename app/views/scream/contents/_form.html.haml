@@ -1,0 +1,14 @@
+.container-fluid
+  .col-md-8
+    = simple_form_for(@content, wrapper: :horizontal, :html=>{:class => 'form-horizontal'}) do |f|
+      = f.error_notification
+      = f.input :url, :label =>'URL', :placeholder => "Url"
+      = f.input :title, :label =>'Title', :placeholder => "Title"
+      = f.input :rates, :label =>'Rates'
+      = f.input :user_id, :label =>'UserId', :placeholder => "UserId"
+      = f.input :tags, :label =>'Tags', :input_html => {"data-pre" => @content.tag_map.to_json, :id => "contentTags"}
+      = f.button :submit ,'Create', :class => 'btn btn-primary'
+      = f.button :button ,'Cancel',:class => 'btn btn-danger'
+:javascript  
+  $('#cancel').on ('click',function(){$('#myModal').modal('hide');})
+    
