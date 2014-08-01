@@ -1,4 +1,5 @@
 
+
 if typeof jQuery == 'undefined'
   headElement = document.getElementsByTagName("head")[0]
   linkElement = document.createElement("script")
@@ -6,11 +7,12 @@ if typeof jQuery == 'undefined'
   headElement.appendChild(linkElement)
 
 screamout = ->
-  if document.getElementById('screamout') == null
+  if document.getElementById('#screamout') == null
     window.scrollTo(0, 0)
-   
+    url = $('#screamoutjs').attr('src').split('/')
+    Host = url[0] + "//" + url[2]
     jQ('<link>',  {
-      href: "http://localhost:8080/assets/scream/iframe.css",
+      href: Host + "/assets/scream/iframe.css",
       rel: "stylesheet",
       type: "text/css"
     }).appendTo('body')
@@ -18,28 +20,29 @@ screamout = ->
     jQ('*','body').not("#screamout").css("opacity","0.9")
     jQ('*','body').not("#screamout").css("pointer-events","none")
 
-    addIframe()
+    addIframe(Host)
   else
     closeIframe()
-    addIframe()
+    addIframe(Host)
  
 
   $("body").not('#screamout').click ->
     closeIframe()
 
-addIframe = ->
+addIframe = (Host)->
+      alert Host
       jQ('<iframe>', {
         id:  'screamout',
         name: "newpage",
         frameborder: 0,
         scrolling: "no",
-        src: "http://localhost:8080/scream/iframe_contents/new/",
+        src: Host + "/scream/iframe_contents/new/",
         allowTransparency: true
       }).appendTo('body')
 
 closeIframe = ->
     jQ('#screamout').remove()
-    document.getElementById('screamoutjs').remove()
+    jQ('#screamoutjs').remove()
     jQ('*','body').not("#screamout").css("opacity","1")
     jQ('*','body').not("#screamout").css("pointer-events","auto")
 
